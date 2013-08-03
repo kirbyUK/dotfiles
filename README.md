@@ -7,6 +7,6 @@ Also I can't be asked to edit the image paths and stuff.
 
 awesome
 =======
-![awesome](https://raw.github.com/kirbyman62/dotfiles/master/awesome/preview.png")
+![awesome](https://raw.github.com/kirbyman62/dotfiles/master/awesome/preview.png)
 
 It's a barely edited default, colours changed to match the 'darkcourses' colourscheme.
