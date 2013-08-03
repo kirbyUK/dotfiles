@@ -1,7 +1,9 @@
 dotfiles
 ========
 
-Various dotfiles for configs and stuff. Not intended for use by anyone other than myself because they're the kind of ugly only a mother could love. Also I can't be asked to edit the image paths and stuff.
+Various dotfiles for configs and stuff. Not intended for use by anyone other than myself because they're the kind of ugly only a mother could love. Not that I am a mother, but you get the idea.
+
+Also I can't be asked to edit the image paths and stuff.
 
 awesome
 =======
