@@ -10,3 +10,9 @@ awesome
 ![awesome](https://raw.github.com/kirbyman62/dotfiles/master/awesome/preview.png)
 
 It's a barely edited default, colours changed to match the 'darkcourses' colourscheme.
+
+dwm
+===
+![dwm-red](https://raw.github.com/kirbyman62/dotfiles/master/dwm/red/preview.png)
+
+My red dwm colourscheme. Pretty much everything about it is 'borrowed'. Font for the icons is 'stlarch'.
