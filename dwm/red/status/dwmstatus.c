@@ -190,6 +190,14 @@ char* getmem()
 	return mem;
 }
 
+char* getsong()
+{
+	char* song;
+	char* title = runcmd("cmus-remote -Q | grep title | cut -d ' ' -f3-");
+	char* artist = runcmd("cmus-remote -Q | grep artist | cut -d ' ' -f3-");
+	song = smprintf("%s - %s", title, artist);
+}
+
 int
 main(void)
 {
@@ -200,6 +208,7 @@ main(void)
 	char *batt;
 	char *temp;
 	char *mem;
+	char *song;
 
 	//Symbols:
 	char* clock = "**";
@@ -211,8 +220,9 @@ main(void)
 	char* battery_half = "**";
 	char* battery_empt = "**";
 	char* temperature = "**";
-	char* ram = "**";
+	char* ram = "**";
 	char* cpu = "**";
+	char* music = "**";
 	int volume;
 
 	if (!(dpy = XOpenDisplay(NULL))) {
@@ -233,8 +243,13 @@ main(void)
 		volume = getvolume();
 		mem = getmem();
 		temp = gettemperature("/sys/class/hwmon/hwmon0", "temp1_input");
+		song = getsong();
 
-		status = smprintf("%s %s%% %s %i%% %s %s %s %s %s %s", battery_full, batt, vol, volume, temperature, temp, ram, mem, clock, tmbln);
+		if(strcmp(song, " - ") == 0)
+			status = smprintf("%s %s%% %s %i%% %s %s %s %s %s %s", battery_full, batt, vol, volume, temperature, temp, ram, mem, clock, tmbln);
+		else
+			status = smprintf("%s %s %s %s%% %s %i%% %s %s %s %s %s %s", music, song, battery_full, batt, vol, volume, temperature, temp, ram, mem, clock, tmbln);
+			
 		setstatus(status);
 		free(tmar);
 		free(tmutc);
