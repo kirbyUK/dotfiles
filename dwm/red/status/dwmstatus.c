@@ -171,6 +171,12 @@ int getmuted()
 	return muted;
 }
 
+char* getpaused()
+{
+	char* status = runcmd("cmus-remote -Q | grep status | awk '{ print $2 }'");
+	return status;
+}
+
 char* gettemperature(char *base, char *sensor)
 {
 	char *co;
@@ -209,6 +215,7 @@ main(void)
 	char *temp;
 	char *mem;
 	char *song;
+	char *songstatus;
 
 	//Symbols:
 	char* clock = "**";
@@ -222,7 +229,9 @@ main(void)
 	char* temperature = "**";
 	char* ram = "**";
 	char* cpu = "**";
-	char* music = "**";
+	char* music;
+	char* note = "**";
+	char* paused = "**";
 	int volume;
 
 	if (!(dpy = XOpenDisplay(NULL))) {
@@ -244,6 +253,12 @@ main(void)
 		mem = getmem();
 		temp = gettemperature("/sys/class/hwmon/hwmon0", "temp1_input");
 		song = getsong();
+		songstatus = getpaused();
+
+		if(strcmp(songstatus, "paused") != 0)
+			music = note;
+		else
+			music = paused;
 
 		if(strcmp(song, " - ") == 0)
 			status = smprintf("%s %s%% %s %i%% %s %s %s %s %s %s", battery_full, batt, vol, volume, temperature, temp, ram, mem, clock, tmbln);
