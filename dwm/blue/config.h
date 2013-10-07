@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const char font[]            = "-artwiz-drift-medium-r-normal-*-11-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#444444";
@@ -47,6 +49,9 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
+static const char *volumedown[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
+static const char *volumeup[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
+static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,7 +81,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} }
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn, { .v = volumedown }},
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn, { .v = volumeup }},
+	{ 0,                            XF86XK_AudioMute,        spawn, { .v = mute }},
 };
 
 /* button definitions */
