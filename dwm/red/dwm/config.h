@@ -54,6 +54,9 @@ static const char *termcmd[]  = { "urxvt", NULL };
 static const char *volumedown[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *volumeup[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *next[] = { "cmus-remote", "-C", "player-next", NULL };
+static const char *prev[] = { "cmus-remote", "-C", "player-prev", NULL };
+static const char *play[] = { "cmus-remote", "--pause", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -93,7 +96,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F1,     spawn,          SHCMD("xscreensaver-command -lock")},
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, { .v = volumedown } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, { .v = volumeup   } },
-	{ 0,                            XF86XK_AudioMute,        spawn, { .v = mute       } }
+	{ 0,                            XF86XK_AudioMute,        spawn, { .v = mute       } },
+	{ 0,							XF86XK_AudioPrev,		 spawn, { .v = prev		  } },
+	{ 0,							XF86XK_AudioNext,		 spawn, { .v = next		  } },
+	{ 0,							XF86XK_AudioPlay,		 spawn, { .v = play       } },
 };
 
 /* button definitions */
