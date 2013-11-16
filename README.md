@@ -17,6 +17,10 @@ dwm
 
 My red dwm colourscheme. Pretty much everything about it is 'borrowed'. Font for the icons is 'stlarch'.
 
+![dwm-brown](https://raw.github.com/kirbyman62/dotfiles/master/dwm/brown/preview.png)
+
+The brown colourscheme. Not that different from the red one really, it's used on the same laptop.
+
 ![dwm-blue](https://raw.github.com/kirbyman62/dotfiles/master/dwm/blue/preview.png)
 
 My blue dwm colourscheme. Font is 'drift' from artwiz.
