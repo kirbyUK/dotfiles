@@ -374,6 +374,7 @@ libdrm-radeon1:i386				install
 libdrm2:amd64					install
 libdrm2:i386					install
 libdv4:amd64					install
+libdvdcss2					install
 libdvdnav4:amd64				install
 libdvdread4:amd64				install
 libedit2:amd64					install
@@ -996,6 +997,7 @@ mplayer2					install
 multiarch-support				install
 mupdf						install
 murrine-themes					install
+myspell-en-gb					install
 nano						install
 ncurses-base					install
 ncurses-bin					install
