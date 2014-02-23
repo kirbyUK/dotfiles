@@ -9,18 +9,16 @@ awesome
 =======
 ![awesome](https://raw.github.com/kirbyman62/dotfiles/master/awesome/preview.png)
 
-It's a barely edited default, colours changed to match the 'darkcourses' colourscheme.
-
 dwm
 ===
 ![dwm-red](https://raw.github.com/kirbyman62/dotfiles/master/dwm/red/preview.png)
-
-My red dwm colourscheme. Pretty much everything about it is 'borrowed'. Font for the icons is 'stlarch'.
+red
 
 ![dwm-brown](https://raw.github.com/kirbyman62/dotfiles/master/dwm/brown/preview.png)
-
-The brown colourscheme. Not that different from the red one really, it's used on the same laptop.
+brown
 
 ![dwm-blue](https://raw.github.com/kirbyman62/dotfiles/master/dwm/blue/preview.png)
+blue
 
-My blue dwm colourscheme. Font is 'drift' from artwiz.
+![dwm-black](https://raw.github.com/kirbyman62/dotfiles/master/dwm/black/preview.png)
+black
