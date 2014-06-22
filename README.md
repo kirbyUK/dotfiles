@@ -11,14 +11,10 @@ awesome
 
 dwm
 ===
-![dwm-red](https://raw.github.com/kirbyman62/dotfiles/master/dwm/red/preview.png)
-red
+![laptop](https://raw.github.com/kirbyman62/dotfiles/master/dwm/laptop/preview.png)
 
-![dwm-brown](https://raw.github.com/kirbyman62/dotfiles/master/dwm/brown/preview.png)
-brown
+My laptop's config. The laptop runs Debian, and is mostly used in fullscreen tiling. Has the patches 'pertag' and 'status-toggle' applied. Icons are from the font 'stlarch'.
 
-![dwm-blue](https://raw.github.com/kirbyman62/dotfiles/master/dwm/blue/preview.png)
-blue
+![netbook](https://raw.github.com/kirbyman62/dotfiles/master/dwm/netbook/preview.png)
 
-![dwm-black](https://raw.github.com/kirbyman62/dotfiles/master/dwm/black/preview.png)
-black
+My more minimal netbook config, designed for floating use. Doesn't use any patches. Both use modified keybindings to make them very similar to awesomewm, because I was too lazy to learn new ones.
