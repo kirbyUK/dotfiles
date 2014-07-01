@@ -7,7 +7,7 @@ while true; do
 	memtotal="$(free -m | grep 'Mem' | awk '{print $2}')"
 	batcurrent="$(cat /sys/class/power_supply/BAT1/charge_now)"
 	battotal="$(cat /sys/class/power_supply/BAT1/charge_full)"
-	batpercent="$((($batcurrent/$battotal)*100))"
+	batpercent="$(echo "scale=1; ($batcurrent / $battotal) * 100" | bc)"
 	songtitle="$(cmus-remote -Q | grep -m 1 title | cut -d ' ' -f3-)"
 	artist="$(cmus-remote -Q | grep -m 1 artist | cut -d ' ' -f3-)"
 	song=""
