@@ -1,0 +1,39 @@
+!!! urxvt
+URxvt.scrollBar:	false
+URxvt.font:		-benis-uushi-medium-r-normal-*-11-*-*-*-*-*-*-*
+URxvt.boldFont:		-benis-uushi-medium-r-normal-*-11-*-*-*-*-*-*-*
+
+*foreground:		#FFFFCC
+*background:		#010010
+
+! black
+*color0:		#010010
+*color8:		#000000
+
+! red
+*color1:		#421A1A
+*color9:		#663333
+
+! green
+*color2:		#426C33
+*color10:		#5A9342
+
+! yellow
+*color3:		#A56343
+*color11:		#D78442
+
+! blue
+*color4:		#09396A
+*color12:		#104184
+
+! magenta
+*color5:		#996684
+*color13:		#CE84CE
+
+! cyan
+*color6:		#3143CE
+*color14:		#638DBD
+
+! white
+*color7:		#CEDCE7
+*color15:		#FFFFCC		
