@@ -3,13 +3,14 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const char font[]            = "-artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#181818";
-static const char normbgcolor[]     = "#181818";
-static const char normfgcolor[]     = "#AAABAF";
-static const char selbordercolor[]  = "#579aa9";
-static const char selbgcolor[]      = "#161616";
-static const char selfgcolor[]      = "#579aa9";
+//static const char font[]            = "-*-fixed-medium-r-normal--10-70-*-*-*-*-*-*";
+static const char font[]            = "-*-clean-medium-r-normal--10-*-*-*-*-50-*-*";
+static const char normbordercolor[] = "#010010";
+static const char normbgcolor[]     = "#010010";
+static const char normfgcolor[]     = "#FFFFCC";
+static const char selbordercolor[]  = "#53323B";
+static const char selbgcolor[]      = "#010010";
+static const char selfgcolor[]      = "#421A1A";
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
@@ -30,8 +31,8 @@ static const Bool resizehints = False; /* True means respect size hints in tiled
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[]=",      tile },    /* first entry is default */
+	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
@@ -52,6 +53,9 @@ static const char *termcmd[]  = { "urxvt", NULL };
 static const char *volumedown[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *volumeup[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *brightup[] = { "xbacklight", "-inc", "10", NULL };
+static const char *brightdown[] = { "xbacklight", "-dec", "10", NULL };
+static const char *lock[] = { "xtrlock", "-b", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -85,6 +89,9 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioLowerVolume, spawn, { .v = volumedown }},
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, { .v = volumeup }},
 	{ 0,                            XF86XK_AudioMute,        spawn, { .v = mute }},
+	{ 0,                            XF86XK_MonBrightnessUp,  spawn, { .v = brightup }},
+	{ 0,                            XF86XK_MonBrightnessDown,spawn, { .v = brightdown }},
+	{ MODKEY,                       XK_F1,					 spawn, { .v = lock }}
 };
 
 /* button definitions */
