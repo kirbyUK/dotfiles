@@ -1,1 +1,1 @@
-![preview](https://raw.githubusercontent.com/kirbyUK/dotfiles/master/Xresources/netbook-2015-09-30/preview.png)
+![preview](https://raw.githubusercontent.com/kirbyUK/dotfiles/master/Xresources/uni-2014-10-12/preview.png)
